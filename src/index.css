@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Woof Peludogs — warm, playful, professional design system */
+
+@layer base {
+  :root {
+    /* Brand palette (HSL) */
+    --background: 36 50% 97%;            /* warm cream */
+    --foreground: 24 55% 15%;            /* deep cocoa */
+
+    --card: 0 0% 100%;
+    --card-foreground: 24 55% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 55% 15%;
+
+    /* Primary = Woof Orange #F37021 */
+    --primary: 22 89% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 30 100% 65%;
+
+    /* Secondary = Cocoa #603813 */
+    --secondary: 25 65% 23%;
+    --secondary-foreground: 36 50% 97%;
+
+    --muted: 32 40% 92%;
+    --muted-foreground: 25 25% 35%;
+
+    --accent: 38 95% 60%;                /* sunny mustard accent */
+    --accent-foreground: 25 65% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 35% 88%;
+    --input: 30 35% 88%;
+    --ring: 22 89% 54%;
+
+    --radius: 1.25rem;
+
+    /* Effects */
+    --gradient-warm: linear-gradient(135deg, hsl(22 89% 54%) 0%, hsl(30 100% 65%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(36 70% 96%) 0%, hsl(30 60% 92%) 100%);
+    --gradient-cocoa: linear-gradient(135deg, hsl(25 65% 23%) 0%, hsl(22 60% 35%) 100%);
+
+    --shadow-soft: 0 10px 30px -12px hsl(25 65% 23% / 0.18);
+    --shadow-warm: 0 20px 50px -15px hsl(22 89% 54% / 0.45);
+    --shadow-card: 0 4px 18px -6px hsl(25 65% 23% / 0.15);
+
+    --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-smooth: all 0.3s ease;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-warm { background: var(--gradient-warm); }
+  .bg-gradient-soft { background: var(--gradient-soft); }
+  .bg-gradient-cocoa { background: var(--gradient-cocoa); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-warm { box-shadow: var(--shadow-warm); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .transition-bounce { transition: var(--transition-bounce); }
+  .transition-smooth { transition: var(--transition-smooth); }
+
+  .paw-bg {
+    background-image: radial-gradient(hsl(var(--primary) / 0.08) 2px, transparent 2px);
+    background-size: 28px 28px;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes wag {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-wag { animation: wag 2.5s ease-in-out infinite; transform-origin: bottom center; }
+.animate-fade-up { animation: fade-up 0.7s ease-out both; }
