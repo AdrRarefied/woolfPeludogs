@@ -51,7 +51,7 @@ const ServicesGrid = () => {
             <h3 className="font-display font-bold text-2xl text-secondary">¿Algo especial?</h3>
             <p className="mt-2 text-muted-foreground">Pregúntanos por servicios personalizados.</p>
             <Button variant="hero" className="mt-5" asChild>
-              <a href="https://wa.me/523334353637" target="_blank" rel="noreferrer">Pregunta ahora</a>
+              <a href="https://wa.me/523331171642" target="_blank" rel="noreferrer">Pregunta ahora</a>
             </Button>
           </div>
         </div>

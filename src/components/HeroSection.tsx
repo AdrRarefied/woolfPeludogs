@@ -18,7 +18,7 @@ const HeroSection = () => {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button variant="hero" size="xl" asChild>
-              <a href="https://wa.me/523334353637" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/523331171642" target="_blank" rel="noreferrer">
                 <MessageCircle /> Agendar por WhatsApp
               </a>
             </Button>
