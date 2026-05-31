@@ -57,6 +57,7 @@ const LocationContact = () => {
             {/* BOTONES DE ACCIÓN */}
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="hero" size="xl" asChild>
+                {/* href actualizado con tu número de WhatsApp oficial */}
                 <a href="https://wa.me" target="_blank" rel="noreferrer" className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" /> Escríbenos por WhatsApp
                 </a>
@@ -93,3 +94,4 @@ const LocationContact = () => {
 };
 
 export default LocationContact;
+
