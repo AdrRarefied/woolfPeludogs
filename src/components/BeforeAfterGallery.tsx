@@ -7,8 +7,8 @@ import after2 from "@/assets/after-2.jpg";
 
 // Arreglo de objetos que agrupa las fotos del "antes" y "después" con el nombre de cada mascota
 const pairs = [
-  { before: before1, after: after1, name: "Luna" },
-  { before: before2, after: after2, name: "Rocky" },
+  { before: before1, after: after1, name: "Golondrina" },
+  { before: before2, after: after2, name: "Moly" },
 ];
 
 // COMPONENTE TARJETA DE COMPARACIÓN (Maneja el slider individual de cada mascota)
